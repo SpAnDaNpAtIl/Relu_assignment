@@ -1,0 +1,10 @@
+My assignment incldues 2 python files
+main.py is responsible for sending requests to amazon links and storing output as json
+I went with requests library for this, added headers to avoid errors. Later for authorized requests with status code 200, I used bs4 inbuilt function find and find_all to get my data
+I opened few 200 status code links myself, saw patterns in the html elements of webpages and targetted those fixed specific ids and classes for getting my values
+For image url, amazon servers had a pattern for saving same image in different resolutions, I spotted it and fixed the URL link to get URL of better quality image
+For price, I spotted that out of 4(i checked unique countries from the DB) countries, 2 had same span class and other 2 had same span class, so used try except
+
+Time elapsed is 405.91859912872314s for entire code
+After repeatedly testing the code, amazon servers started blocking access to few URLs, so json file contents will keep changing after everytime code is run again. I request to run code
+first and then see the json file as current json file in github repo has very less data for now.
